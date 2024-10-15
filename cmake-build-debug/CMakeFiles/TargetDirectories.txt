@@ -1,0 +1,3 @@
+/Users/netia/CLionProjects/console_game/cmake-build-debug/CMakeFiles/console_game.dir
+/Users/netia/CLionProjects/console_game/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/netia/CLionProjects/console_game/cmake-build-debug/CMakeFiles/rebuild_cache.dir
