@@ -7,7 +7,7 @@
 class Player {
     int x, y; // Позиция игрока
     char symbol; // Модель игрока
-    std::string name = "test"; // Ник
+    std::string name; // Ник
     std::string state; // Состояние
 
 public:

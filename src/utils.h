@@ -1,7 +1,3 @@
-//
-// Created by Иван Нетяженко on 15.10.2024.
-//
-
 #ifndef UTILS_H
 #define UTILS_H
 

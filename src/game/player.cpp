@@ -1,6 +1,6 @@
 #include "player.h"
 
-Player::Player() : x(0), y(0), symbol('@'), state("idle") {}
+Player::Player() : x(0), y(0), symbol('@'), state("idle"), name("testo") {}
 
 void Player::move(int dx, int dy) {
     x += dx;

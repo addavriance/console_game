@@ -5,7 +5,7 @@
 #include <vector>
 #include <thread>
 #include <atomic>
-#include "location.h"
+#include "../map/location.h"
 #include "player.h"
 
 class Engine {

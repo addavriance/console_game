@@ -1,7 +1,6 @@
 #include "location.h"
-#include "utils.h"
+#include "../utils.h"
 #include <iostream>
-#include <iterator>
 #include <random>
 
 Location::Location(int w, int h) : width(w), height(h) {
@@ -31,17 +30,15 @@ Location::Location(int w, int h) : width(w), height(h) {
 void Location::draw(int screenWidth, int screenHeight, const Player& player) const {
     for (int y = 0; y < screenHeight; y++) {
         for (int x = 1; x < screenWidth; x+=std::vector<Tile>::value_type::WIDTH) {
-            if (x-1 <= player.getX() && player.getX() <= x+1 && y == player.getY()) {
-                tiles[x][y].draw(player.getX(), player.getY(), player);
-            } else {
-                tiles[x][y].draw(0, 0, std::nullopt);
-            }
+            tiles[x][y].draw(0, 0, std::nullopt);
         }
         std::cout << std::endl;
     }
 
+    std::cout << "\033[" << player.getY() << ";" << player.getX() << "H";
+    std::cout << player.getSymbol();
 
-    std::cout << "\033[" << player.getY() << ";" << player.getX()-2 << "H";
+    std::cout << "\033[" << player.getY()-1 << ";" << player.getX() - (player.getName().length()+4)/2 << "H";
     std::cout << "[ " << player.getName() << " ]";
     std::cout << "\033[" << 24/2 << ";" << 81 << "H";
     std::cout.flush();

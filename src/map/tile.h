@@ -4,7 +4,7 @@
 #pragma once
 #include <string>
 
-#include "player.h"
+#include "../game/player.h"
 
 class Tile {
 public:

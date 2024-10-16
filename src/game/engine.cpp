@@ -5,7 +5,7 @@
 
 // Включение неблокирующего режима для консоли
 void enableRawMode() {
-    termios term;
+    termios term{};
     tcgetattr(STDIN_FILENO, &term);
     term.c_lflag &= ~(ICANON | ECHO); // Отключаем канонический режим и ввод с эхо
     tcsetattr(STDIN_FILENO, TCSANOW, &term);
@@ -13,7 +13,7 @@ void enableRawMode() {
 
 // Возвращаем консоль в нормальный режим
 void disableRawMode() {
-    termios term;
+    termios term{};
     tcgetattr(STDIN_FILENO, &term);
     term.c_lflag |= (ICANON | ECHO); // Включаем канонический режим и эхо
     tcsetattr(STDIN_FILENO, TCSANOW, &term);

@@ -1,4 +1,4 @@
-#include "engine.h"
+#include "./src/game/engine.h"
 
 int main() {
     // Инициализируем движок с размерами экрана, например 20x10 символов

@@ -4,7 +4,7 @@
 #pragma once
 #include <vector>
 #include "tile.h"
-#include "player.h"
+#include "../game/player.h"
 
 class Location {
     int width, height;
